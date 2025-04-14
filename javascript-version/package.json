@@ -15,7 +15,7 @@
     "type": "git",
     "url": "https://github.com/themeselection/materio-mui-react-nextjs-admin-template-free.git"
   },
-  "homepage": "https://themeselection.com/products/materio-free-mui-react-nextjs-admin-template/",
+  "homepage": "https://github.com/KhanAnupamShafi/materio/javascript-version",
   "keywords": [
     "react",
     "javascript",
@@ -41,7 +41,9 @@
     "start": "next start",
     "export": "next export",
     "lint": "eslint --fix \"src/**/*.{js,jsx}\"",
-    "format": "prettier --write \"src/**/*.{js,jsx}\""
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "predeploy": "next export",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@emotion/cache": "^11.6.0",
@@ -55,6 +57,7 @@
     "babel-eslint": "^10.1.0",
     "clsx": "^1.1.1",
     "eslint-plugin-react": "^7.29.4",
+    "gh-pages": "^6.3.0",
     "mdi-material-ui": "^7.1.0",
     "next": "12.0.4",
     "nprogress": "^0.2.0",
