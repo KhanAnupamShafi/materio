@@ -7,6 +7,7 @@ import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
 import CardContent from '@mui/material/CardContent'
 import AvatarGroup from '@mui/material/AvatarGroup'
+import { withPrefix } from 'src/utils/pathPrefix'
 
 const CardUser = () => {
   return (
@@ -14,7 +15,7 @@ const CardUser = () => {
       <CardMedia sx={{ height: '12.625rem' }} image='/images/cards/background-user.png' />
       <Avatar
         alt='Robert Meyer'
-        src='/images/avatars/1.png'
+        src={withPrefix('/images/avatars/1.png')}
         sx={{
           width: 75,
           height: 75,
@@ -46,13 +47,13 @@ const CardUser = () => {
             18 mutual friends
           </Typography>
           <AvatarGroup max={4}>
-            <Avatar src='/images/avatars/8.png' alt='Alice Cobb' />
-            <Avatar src='/images/avatars/7.png' alt='Jeffery Warner' />
-            <Avatar src='/images/avatars/3.png' alt='Howard Lloyd' />
-            <Avatar src='/images/avatars/2.png' alt='Bettie Dunn' />
-            <Avatar src='/images/avatars/4.png' alt='Olivia Sparks' />
-            <Avatar src='/images/avatars/5.png' alt='Jimmy Hanson' />
-            <Avatar src='/images/avatars/6.png' alt='Hallie Richards' />
+            <Avatar src={withPrefix('/images/avatars/8.png')} alt='Alice Cobb' />
+            <Avatar src={withPrefix('/images/avatars/7.png')} alt='Jeffery Warner' />
+            <Avatar src={withPrefix('/images/avatars/3.png')} alt='Howard Lloyd' />
+            <Avatar src={withPrefix('/images/avatars/2.png')} alt='Bettie Dunn' />
+            <Avatar src={withPrefix('/images/avatars/4.png')} alt='Olivia Sparks' />
+            <Avatar src={withPrefix('/images/avatars/5.png')} alt='Jimmy Hanson' />
+            <Avatar src={withPrefix('/images/avatars/6.png')} alt='Hallie Richards' />
           </AvatarGroup>
         </Box>
       </CardContent>

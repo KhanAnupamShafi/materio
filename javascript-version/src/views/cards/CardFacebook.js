@@ -9,6 +9,7 @@ import CardContent from '@mui/material/CardContent'
 import Heart from 'mdi-material-ui/Heart'
 import Facebook from 'mdi-material-ui/Facebook'
 import ShareVariant from 'mdi-material-ui/ShareVariant'
+import { withPrefix } from 'src/utils/pathPrefix'
 
 const CardFacebook = () => {
   return (
@@ -27,7 +28,11 @@ const CardFacebook = () => {
         </Typography>
         <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between' }}>
           <Box sx={{ mr: 2, display: 'flex', alignItems: 'center' }}>
-            <Avatar alt='Eugene Clarke' src='/images/avatars/1.png' sx={{ width: 34, height: 34, marginRight: 2.75 }} />
+            <Avatar
+              alt='Eugene Clarke'
+              src={withPrefix('/images/avatars/1.png')}
+              sx={{ width: 34, height: 34, marginRight: 2.75 }}
+            />
             <Typography variant='body2' sx={{ color: 'common.white' }}>
               Eugene Clarke
             </Typography>

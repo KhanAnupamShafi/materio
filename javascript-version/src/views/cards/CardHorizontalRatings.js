@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography'
 import CardContent from '@mui/material/CardContent'
 import CardActions from '@mui/material/CardActions'
 import Grid from '@mui/material/Grid'
+import { withPrefix } from 'src/utils/pathPrefix'
 
 // Styled Grid component
 const StyledGrid1 = styled(Grid)(({ theme }) => ({
@@ -69,7 +70,7 @@ const CardHorizontalRatings = () => {
         </StyledGrid1>
         <StyledGrid2 item xs={12} md={6} lg={5}>
           <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Img alt='Stumptown Roasters' src='/images/cards/analog-clock.jpg' />
+            <Img alt='Stumptown Roasters' src={withPrefix('/images/cards/analog-clock.jpg')} />
           </CardContent>
         </StyledGrid2>
       </Grid>

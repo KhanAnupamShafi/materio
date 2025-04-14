@@ -4,6 +4,7 @@ import { Fragment } from 'react'
 // ** MUI Components
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { styled, useTheme } from '@mui/material/styles'
+import { withPrefix } from 'src/utils/pathPrefix'
 
 // Styled Components
 const MaskImg = styled('img')(() => ({
@@ -35,8 +36,8 @@ const FooterIllustrations = props => {
   if (!hidden) {
     return (
       <Fragment>
-        {image || <TreeImg alt='tree' src='/images/pages/tree-2.png' />}
-        <MaskImg alt='mask' src={`/images/pages/misc-mask-${theme.palette.mode}.png`} />
+        {image || <TreeImg alt='tree' src={withPrefix('/images/pages/tree-2.png')} />}
+        <MaskImg alt='mask' src={`${withPrefix}/images/pages/misc-mask-${theme.palette.mode}.png`} />
       </Fragment>
     )
   } else {

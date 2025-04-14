@@ -18,6 +18,7 @@ import BellOutline from 'mdi-material-ui/BellOutline'
 
 // ** Third Party Components
 import PerfectScrollbarComponent from 'react-perfect-scrollbar'
+import { withPrefix } from 'src/utils/pathPrefix'
 
 // ** Styled Menu component
 const Menu = styled(MuiMenu)(({ theme }) => ({
@@ -130,7 +131,7 @@ const NotificationDropdown = () => {
         <ScrollWrapper>
           <MenuItem onClick={handleDropdownClose}>
             <Box sx={{ width: '100%', display: 'flex', alignItems: 'center' }}>
-              <Avatar alt='Flora' src='/images/avatars/4.png' />
+              <Avatar alt='Flora' src={withPrefix('/images/avatars/4.png')} />
               <Box sx={{ mx: 4, flex: '1 1', display: 'flex', overflow: 'hidden', flexDirection: 'column' }}>
                 <MenuItemTitle>Congratulation Flora! 🎉</MenuItemTitle>
                 <MenuItemSubtitle variant='body2'>Won the monthly best seller badge</MenuItemSubtitle>
@@ -154,7 +155,7 @@ const NotificationDropdown = () => {
           </MenuItem>
           <MenuItem onClick={handleDropdownClose}>
             <Box sx={{ width: '100%', display: 'flex', alignItems: 'center' }}>
-              <Avatar alt='message' src='/images/avatars/5.png' />
+              <Avatar alt='message' src={withPrefix('/images/avatars/5.png')} />
               <Box sx={{ mx: 4, flex: '1 1', display: 'flex', overflow: 'hidden', flexDirection: 'column' }}>
                 <MenuItemTitle>New message received 👋🏻</MenuItemTitle>
                 <MenuItemSubtitle variant='body2'>You have 10 unread messages</MenuItemSubtitle>
@@ -166,7 +167,7 @@ const NotificationDropdown = () => {
           </MenuItem>
           <MenuItem onClick={handleDropdownClose}>
             <Box sx={{ width: '100%', display: 'flex', alignItems: 'center' }}>
-              <img width={38} height={38} alt='paypal' src='/images/misc/paypal.png' />
+              <img width={38} height={38} alt='paypal' src={withPrefix('/images/misc/paypal.png')} />
               <Box sx={{ mx: 4, flex: '1 1', display: 'flex', overflow: 'hidden', flexDirection: 'column' }}>
                 <MenuItemTitle>Paypal</MenuItemTitle>
                 <MenuItemSubtitle variant='body2'>Received Payment</MenuItemSubtitle>
@@ -178,7 +179,7 @@ const NotificationDropdown = () => {
           </MenuItem>
           <MenuItem onClick={handleDropdownClose}>
             <Box sx={{ width: '100%', display: 'flex', alignItems: 'center' }}>
-              <Avatar alt='order' src='/images/avatars/3.png' />
+              <Avatar alt='order' src={withPrefix('/images/avatars/3.png')} />
               <Box sx={{ mx: 4, flex: '1 1', display: 'flex', overflow: 'hidden', flexDirection: 'column' }}>
                 <MenuItemTitle>Revised Order 📦</MenuItemTitle>
                 <MenuItemSubtitle variant='body2'>New order revised from john</MenuItemSubtitle>
@@ -190,7 +191,7 @@ const NotificationDropdown = () => {
           </MenuItem>
           <MenuItem onClick={handleDropdownClose}>
             <Box sx={{ width: '100%', display: 'flex', alignItems: 'center' }}>
-              <img width={38} height={38} alt='chart' src='/images/misc/chart.png' />
+              <img width={38} height={38} alt='chart' src={withPrefix('/images/misc/chart.png')} />
               <Box sx={{ mx: 4, flex: '1 1', display: 'flex', overflow: 'hidden', flexDirection: 'column' }}>
                 <MenuItemTitle>Finance report has been generated</MenuItemTitle>
                 <MenuItemSubtitle variant='body2'>25 hrs ago</MenuItemSubtitle>

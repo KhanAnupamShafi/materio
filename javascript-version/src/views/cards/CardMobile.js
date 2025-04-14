@@ -21,6 +21,7 @@ import Facebook from 'mdi-material-ui/Facebook'
 import Linkedin from 'mdi-material-ui/Linkedin'
 import GooglePlus from 'mdi-material-ui/GooglePlus'
 import ShareVariant from 'mdi-material-ui/ShareVariant'
+import { withPrefix } from 'src/utils/pathPrefix'
 
 // Styled Grid component
 const StyledGrid = styled(Grid)(({ theme }) => ({
@@ -53,7 +54,12 @@ const CardMobile = () => {
       <Grid container spacing={6}>
         <StyledGrid item md={5} xs={12}>
           <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img width={137} height={176} alt='Apple iPhone 11 Pro' src='/images/cards/iPhone-11-pro.png' />
+            <img
+              width={137}
+              height={176}
+              alt='Apple iPhone 11 Pro'
+              src={withPrefix('/images/cards/iPhone-11-pro.png')}
+            />
           </CardContent>
         </StyledGrid>
         <Grid
